@@ -5,6 +5,9 @@ var requestHandler = function(request, response) {
   var jsonString = "";
   request.on("data", function(d){
     jsonString += d;
+    jsonString.body = {};
+
+
   })
   if(request.method === "GET"){
     if(request.url === "/classes/messages"){
@@ -20,7 +23,8 @@ var requestHandler = function(request, response) {
   headers['Content-Type'] = "text/plain";
 
   response.writeHead(statusCode, headers);
-  response.end(JSON.stringify(jsonString));
+  response.end(JSON.stringify({jsonString:jsonString, results:[]}));
+
 
 //if POST request
   //add incoming data to storage object
