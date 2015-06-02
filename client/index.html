@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>chatterbox</title>
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- dependencies -->
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <!-- your scripts -->
+
+    <script src="env/config.js"></script>
+    <script src="scripts/app.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <h1>Chatterbox</h1>
+      <!-- Your HTML goes here! -->
+      <form id="mainForm">
+        <input type="text" placeholder="username" id="usernameInput"></input><br>
+        <input type="text" placeholder="roomname" id="roomnameInput"></input><br>
+        <input type="text" placeholder="ur message" id="textInput"</input><br>
+        <br>
+        <input type="button" value="submit" id="sendMessageButton">
+        <input type="button" value="list friends" id="listFriendsButton"></input>
+        <input type="button" value="clear" id="clearButton"></input>
+                <select id="roomsMenu">
+          <option selected="selected" class="roomOption">pick a room..any room</option>
+        </select>
+      </form>
+      <div id="chats">
+        <fieldset>
+          <legend id="roomFeedLegend">Room Feed</legend>
+          <div>
+            <ul id="friendsList"></ul>
+          </div>
+        </fieldset>
+      </div>
+      <fieldset>
+        <legend>Best Amigos</legend>
+        <div>
+          <ul id="bestFriendsList">
+
+          </ul>
+        </div>
+      </fieldset>
+    </div>
+  </body>
+</html>
