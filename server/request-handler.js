@@ -2,29 +2,34 @@ var requestHandler = function(request, response) {
   console.log("Serving request type " + request.method + " for url " + request.url);
   // The outgoing status.
 
+  var obj = {};
+  obj.results = [];
   var jsonString = "";
+  var statusCode;
   request.on("data", function(d){
     jsonString += d;
-    jsonString.body = {};
-
-
+    obj.jsonString = jsonString;
+    // obj.results.push(d);
   })
+
   if(request.method === "GET"){
     if(request.url === "/classes/messages"){
-      response.statusCode = 200;
-    } else if(request.method === "POST"){
-    response.write("postin");
+       statusCode = 200;
+    }
   }
-}
+  if(request.method === "POST"){
+      if(request.url === "/classes/messages"){
+        statusCode = 201;
+      }
+   }
 
-  var statusCode = 200;
+
   // See the note below about CORS headers.
   var headers = defaultCorsHeaders;
   headers['Content-Type'] = "text/plain";
 
   response.writeHead(statusCode, headers);
-  response.end(JSON.stringify({jsonString:jsonString, results:[]}));
-
+  response.end(JSON.stringify(obj));
 
 //if POST request
   //add incoming data to storage object
