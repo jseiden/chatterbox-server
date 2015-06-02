@@ -1,6 +1,6 @@
 // YOUR CODE HERE:
 var app = {
-  server: 'https://api.parse.com/1/classes/chatterbox'
+  server: '"127.0.0.1"'
 };
 
 app.init = function(){
@@ -9,7 +9,7 @@ app.init = function(){
 
 app.send = function(message){
   $.ajax({
-    url: 'https://api.parse.com/1/classes/chatterbox',
+    url: "127.0.0.1",
     type: 'POST',
     data: JSON.stringify(message),
     contentType: 'application/json',
@@ -30,7 +30,7 @@ var userObjects = {};
 app.fetch = function(){
   $.ajax({
     // always use this url
-    url: 'https://api.parse.com/1/classes/chatterbox',
+    url: "127.0.0.1",
     type: 'GET',
     data: JSON.stringify(),
     contentType: 'application/json',
