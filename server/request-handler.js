@@ -5,22 +5,23 @@ var requestHandler = function(request, response) {
   // See the note below about CORS headers.
   var headers = defaultCorsHeaders;
   headers['Content-Type'] = "text/plain";
-
+  var jsonString = "";
+  request.on("data", function(d){
+    jsonString += d;
+  })
   if(request.method === "GET"){
     if(request.url === "/classes/messages"){
-    response.statusCode = 200;
-
-
-      }
+      response.statusCode = 200;
     } else if(request.method === "POST"){
     response.write("postin");
   }
-  response.end("hi");
+}
+  response.end("hello");
 
 
 
   response.writeHead(statusCode, headers);
-  response.end(JSON.stringify(data));
+  response.end(jsonString);
 
 //if POST request
   //add incoming data to storage object

@@ -1,0 +1,117 @@
+
+body {
+    /*background: #eee;*/
+    text-align: center;
+    color: #FFFFFF;
+    padding: 0 25px;
+    font-family: facebook;
+    background: #FFFFFF;
+}
+
+#main {
+    width: 500px;
+    margin: auto;
+    text-align: left;
+    background: #4D579D;
+    padding: 50px 60px;
+    border: solid #ddd;
+    border-width: 0 1px 1px 1px;
+}
+
+#main h1 {
+    margin-top: 0;
+    font-size: 35px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+#main h1 span {
+    font-style:italic;
+}
+
+#main ul {
+    padding-left: 20px;
+}
+
+#main .error {
+    border: 1px solid red;
+    background: #FDEFF0;
+    padding: 20px;
+}
+
+#main .success {
+    margin-top: 25px;
+}
+
+#main .success code {
+    font-size: 12px;
+    color: green;
+    line-height: 13px;
+}
+
+form {
+    padding: 20px;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+form input[type=text] {
+    margin-right: 10px;
+    width: 70%;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.chat {
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #eee;
+}
+
+.chat .username {
+    font-weight: 800;
+}
+
+.chat:hover {
+    background-color: #ddd;
+}
+
+.spinner {
+    float: right;
+    height: 46px;
+    margin-bottom: 5px;
+}
+
+.spinner img {
+    padding: 10px;
+}
+input[type = "text"]{
+  border:2px solid black;
+  margin: 5px;
+  box-shadow: 3px 3px black;
+}
+fieldset{
+    box-shadow: 6px 6px black;
+    margin: 5px;
+    width: 500px;
+    color: black;
+}
+
+.message{
+    font-family: "Impact";
+    text-shadow: "2px 2px black";
+}
+.username{
+    color: orange;
+}
+.username:hover{
+    text-shadow: 1px 1px white;
+}
+select{
+    margin: 5px;
+    width: 100px;
+}
+
+
+@font-face {font-family: facebook;src: url('facebook.ttf');}
+
